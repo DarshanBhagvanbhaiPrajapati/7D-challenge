@@ -31,13 +31,9 @@
 <!-- hero section starts -->
 <section class="home" id="home">
     <video autoplay muted loop class="background-video">
-        <source src="gymback.mp4" type="video/mp4">
+        <source src="/images/gymback.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <audio id="background-audio" autoplay loop>
-        <source src="gymmus.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
     <div class="content">
         <h2><span>"If it does not challenge you <br>, it does not change you."</span></h2>
         <a href="#about" class="btn">
@@ -58,11 +54,17 @@
 <section class="about" id="about">
     <h2 class="heading">Challenges</h2>
     <div class="buttons-container">
-        <button class="btn">Beginner</button>
-        <button class="btn">Intermediate</button>
-        <button class="btn">Advanced</button>
+        <button class="btn" onclick="openPage('beginner.html')">Beginner</button>
+        <button class="btn" onclick="openPage('intermediate.html')">Intermediate</button>
+        <button class="btn" onclick="openPage('advanced.html')">Advanced</button>
     </div>
-</section>  
+</section>
+
+<script>
+    function openPage(page) {
+        window.open(page, '_blank');
+    }
+</script>
 <!-- about section ends -->
 
 <hr class="bold-line">
