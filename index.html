@@ -21,8 +21,9 @@
             <li><a class="active" href="#home">Home</a></li>
             <li><a href="#about">Challenges</a></li>
             <li><a href="#Yoga">Yoga</a></li>
-            <li><a href="#education">Meditation</a></li>
-            <li><a href="#Achievements">Quotes</a></li>
+            <li><a href="#meditation">Meditation</a></li>
+            <li><a href="#Quotes">Quotes</a></li>
+            <li><a href="#Login">Login</a></li>
         </ul>
     </nav>
 </header>
@@ -52,11 +53,15 @@
 
 <!-- about section starts -->
 <section class="about" id="about">
+    <video autoplay muted loop class="background-video">
+        <source src="./images/Challbac.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <h2 class="heading">Challenges</h2>
     <div class="buttons-container">
-        <button class="btn" onclick="openPage('beginner.html')">Beginner</button>
-        <button class="btn" onclick="openPage('intermediate.html')">Intermediate</button>
-        <button class="btn" onclick="openPage('advanced.html')">Advanced</button>
+        <button class="btn" onclick="openPage('beg.html')">Beginner</button>
+        <button class="btn" onclick="openPage('inter.html')">Intermediate</button>
+        <button class="btn" onclick="openPage('adva.html')">Advanced</button>
     </div>
 </section>
 
@@ -74,31 +79,31 @@
     <h1 class="heading">YOGA</h1>
     <div class="container">
         <div class="row" id="yogaContainer">
-            <a href="https://www.youtube.com/watch?v=IKzkc3FWx7g" class="yoga-box">
+            <a href="https://www.youtube.com/watch?v=IKzkc3FWx7g" class="yoga-box" target="_blank">  
                 <h3>Day 1</h3>
                 <img src="images/d1surya.jpg" alt="Yoga Exercise 1">
             </a>
-            <a href="https://www.youtube.com/watch?v=EC7RGJ975iM" class="yoga-box">
+            <a href="https://www.youtube.com/watch?v=EC7RGJ975iM" class="yoga-box" target="_blank">
                 <h3>Day 2</h3>
                 <img src="images/d2adho.jpg" alt="Yoga Exercise 2">
             </a>
-            <a href="https://www.youtube.com/watch?v=NytDpa2r34g" class="yoga-box">
+            <a href="https://www.youtube.com/watch?v=NytDpa2r34g" class="yoga-box" target="_blank">
                 <h3>Day 3</h3>
                 <img src="images/d3vira.png" alt="Yoga Exercise 3">
             </a>
-            <a href="link_to_day4" class="yoga-box">
+            <a href="https://www.youtube.com/watch?v=Fr5kiIygm0c" class="yoga-box" target="_blank">
                 <h3>Day 4</h3>
                 <img src="images/d4vrkasana.jpg" alt="Yoga Exercise 4">
             </a>
-            <a href="link_to_day5" class="yoga-box">
+            <a href="https://www.youtube.com/watch?v=33L6oog4sbY" class="yoga-box" target="_blank"> 
                 <h3>Day 5</h3>
                 <img src="images/d5balasana.jpg" alt="Yoga Exercise 5">
             </a>
-            <a href="link_to_day6" class="yoga-box">
+            <a href="https://www.youtube.com/watch?v=fOdrW7nf9gw" class="yoga-box" target="_blank">
                 <h3>Day 6</h3>
                 <img src="images/d6bhujanga.webp" alt="Yoga Exercise 6">
             </a>
-            <a href="link_to_day7" class="yoga-box">
+            <a href="https://www.youtube.com/watch?v=T8sgVyF4Ux4" class="yoga-box" target="_blank">
                 <h3>Day 7</h3>
                 <img src="images/d7pachi.jpg" alt="Yoga Exercise 7">
             </a>
@@ -109,20 +114,34 @@
 
 <hr class="bold-line">
 
-<!-- education section starts -->
-<section class="education" id="education">
+<!-- meditation section starts -->
+<section class="meditation" id="meditation">
     <h1 class="heading">Meditation</h1>
+    <div class="video-container">
+        <video controls width="1300">
+            <source src="/images/medivid.mp4" type="video/mp4">
+            <source src="/images/medivid.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </section>
-<!-- education section ends -->
+<!-- meditation section ends -->
 
 <hr class="bold-line">
 
-<!-- Achievements section starts -->
-<section class="Achievements" id="Achievements">
+<!-- Quotes section starts -->
+<section class="Quotes" id="Quotes">
     <h2 class="heading">Quotes</h2>
+    <div class="box-container">
+        <div class="box">Quote 1</div>
+        <div class="box">Quote 2</div>
+        <div class="box">Quote 3</div>
+        <div class="box">Quote 4</div>
+    </div>
     <p>"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful." - Albert Schweitzer</p>
 </section>
-<!-- Achievements section ends -->
+
+<!-- Quotes section ends -->
 
 <hr class="bold-line">
 

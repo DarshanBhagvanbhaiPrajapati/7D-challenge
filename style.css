@@ -307,47 +307,63 @@ header .navbar ul li a:hover {
 /* about section starts */
 /* Base Styles for the .about Section */
 .about {
-    position: relative;
-    background: black; 
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .heading {
-    color: #f9f6f6;  
-    font-size: 5rem; 
-    font-weight: bold;
-    margin-bottom: 2rem;
-    text-decoration: underline;
-  }
-  
-  .buttons-container {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;  
-    gap: 5rem;  
-  }
-  
-  .about .btn {
-    background-color:#16f0b2;
-    padding: 4rem 2rem;
-    width: 600px;
-    border: 2px solid #ed1111;
-    color: #190b2d;
-    font-size: 4rem;
-    font-weight: 700;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-  }
-  
-  .about .btn:hover {
-    background-color: #ed1111;
-    border-color: #fff;
-    color: #fff;
-    transform: scale(1.05);
-  }
+  position: relative;
+  padding: 40px;
+  text-align: center;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
 
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1; /* Place video behind content */
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Cover the entire section */
+}
+
+.heading {
+  color: #f9f6f6;  
+  font-size: 5rem; 
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  position: relative; /* Position relative to stack above video */
+  z-index: 2; 
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;  
+  gap: 5rem;  
+  position: relative; 
+  z-index: 2; 
+}
+
+.about .btn {
+  background-color: #16f0b2;
+  padding: 4rem 2rem;
+  width: 600px;
+  border: 2px solid #ed1111;
+  color: #190b2d;
+  font-size: 4rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.about .btn:hover {
+  background-color: #ed1111;
+  border-color: #fff;
+  color: #fff;
+  transform: scale(1.05);
+}
 /* about section ends */
 
 /* yoga section starts */
@@ -488,45 +504,74 @@ header .navbar ul li a:hover {
 }
 /* yoga section ends */
 
-/* education section starts */
-.education {
+/* meditation section starts */
+.meditation {
   background: #070707;
   min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
 }
-.education .heading{
+
+.meditation .heading {
   color: #fcf9f9;
-}
-.education .heading .qoute {
-  font-size: 2.5rem;
-  text-align: center;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  margin-top: 1rem;
-  color: #f8fbf9;
+  margin-bottom: 20px;
 }
 
-/* education section ends */
+.video-container {
+  margin-bottom: 10px;
+  border: 2px solid red; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  transition: transform 0.5s ease; 
+}
 
-/* Achievements section starts */
-.Achievements{
+.video-container:hover {
+  animation: rotate-border 1.5s infinite; 
+  transform: scale(1.05); 
+}
+
+@keyframes rotate-border {
+  0% {
+      border-color: red;
+  }
+  33% {
+      border-color: yellow;
+  }
+  66% {
+      border-color: white;
+  }
+  100% {
+      border-color: red; 
+  }
+}
+.video-container video {
+  width: 100%; 
+  height: auto; 
+}
+/* meditation section ends */
+
+/* Quotes section starts */
+.Quotes{
   background-color:rgb(5, 5, 5);
 }
-.Achievements .heading{
+.Quotes .heading{
   color:#faf7f7;
 
 }
-.Achievements .heading .span{
+.Quotes .heading .span{
   color: rgb(141, 16, 163);
 }
 
-/* Achievements media queries ends */
-/* Achievements section ends */
+/* Quotes media queries ends */
+/* Quotes section ends */
 
 /* footer section starts */
 .footer {
   min-height: auto;
   padding-top: 0;
-  background: rgb(0, 1, 43);
+  background: black;
 }
 .footer .box-container {
   display: flex;
